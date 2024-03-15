@@ -1,0 +1,108 @@
+.narrative {
+    margin: 4rem 6rem;
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 7rem;
+    }
+
+    
+    &__box__reverse {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        // justify-content: center;
+        margin-top: 7rem;
+    }
+
+    &__boxText__reverse {
+        display: flex;
+        justify-content: flex-start;
+        margin-right: 10%;
+    }
+
+    &__boxText {
+        width: 40%;
+        // 文本對齊開頭
+        text-align: start;
+        align-self: flex-start;
+        margin-top: 3rem;
+        font-size: 1.1rem;
+        margin-left: 6%;
+
+        h2 {
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__box__images {
+        position: relative;
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        z-index: -99;
+        margin-right: 6%;
+
+        img {
+            // 兩張圖，各49%，中1%留白
+            width: 49%;
+            height: 450px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 5px 5px 60px 20px rgba(14, 13, 13, 0.19);
+        
+            // 選擇第二個子元素進行位置調整
+            &:nth-child(2) {
+                position: absolute;
+                // 元素的上緣會超出父容器的頂部，因此元素會被隱藏在父容器之外，看不到它。
+                top: -10%;
+                // 讓元素貼在父容器右側
+                right: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 720px) {
+        .narrative{
+            margin: 4rem 2rem;
+
+            &__box {
+                flex-direction: column-reverse;
+                margin-top: 4.5rem;
+            }
+
+            &__box__reverse {
+                display: flex;
+                flex-direction: column-reverse;
+                margin-top: 4.5rem;
+            }
+
+            &__boxText {
+                width: 100%;
+                margin-top: 1rem;
+                h2 {
+                    text-align: center;
+                }
+            }
+
+            &__box__images {
+                width: 100%;
+                margin-right: 0;
+
+                img {
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+}
+
+

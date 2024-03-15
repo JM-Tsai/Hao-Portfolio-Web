@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.layoutTitle {
+    margin: 4rem 6rem;
+    height: 80vh;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    h1 {
+        font-size: 3rem;
+        z-index: 1;
+    }
+}
+
+.card {
+    position: relative;
+    z-index: 0;
+    width: 500px;
+    height: 190px;
+    // height: 450px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.20);
+    transition: 0.5s;
+    display: flex;
+
+    &:hover {
+        height: 450px;
+    }
+
+    .cardImg {
+        position: absolute;
+        left: 50%;
+        top: -50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 150px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.20);
+        overflow: hidden;
+        transition: 0.5s;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    // 可能出錯
+    &:hover .cardImg  {
+        width: 300px;
+        height: 300px;
+        left: 50%; // 將左邊界設定在父元素的中央
+        top: 50%; // 將上邊界設定在父元素的中央
+        transform: translate(-50%, -70%); // 使用translate來偏移自己的一半寬度和高度
+    }
+
+    // context
+    .context {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        overflow: hidden;
+    
+        .contextDetails {
+            padding: 40px;
+            text-align: center;
+            width: 100%;
+            transition: 0.5s;
+            transform: translateY(100px);
+        
+            h2 {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: #555;
+                line-height: 1.2rem;
+            
+                .data {
+                    display: flex;
+                    justify-content: space-between;
+                    margin:  20px 0;
+                }
+            }
+        }
+    }
+    &:hover {
+        .context {
+            .contextDetails {
+                transform: translateY(0); // 将 translateY 0 以移動內容
+            }
+        }
+    }
+
+}
+

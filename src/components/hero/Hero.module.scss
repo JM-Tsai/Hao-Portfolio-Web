@@ -1,0 +1,67 @@
+.hero {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+        height: 80vh;
+        // 這裡用於圖片適應容器，溢出部分裁切
+        object-fit: cover;
+    }
+    
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background-color: white;
+            // 設置文本為透明，這裡也用基本的color:white也行
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background-color: white;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-bottom: 20px;
+        }
+    }
+
+
+    @media screen and (max-width:720px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        height: 50vh;
+
+        h1 {
+            font-size: 1.2rem;
+            font-weight: 1000;
+            padding: 10px 20px;
+        }
+    }
+}
+
+
+
+
+

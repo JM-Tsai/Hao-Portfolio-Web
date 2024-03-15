@@ -1,0 +1,63 @@
+.CardBox {
+    margin:  5rem 6rem;
+    color: rgb(14, 13, 13);
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    &__newsCard {
+       margin-top: 3rem;
+       display: flex;
+       justify-content: space-between; 
+    }
+}
+
+.card {
+    width: 32%;
+    height: 200px;
+    text-align: start;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 1;
+    margin-top: 1rem;
+
+    &__image {
+        height: 200px;
+        overflow: hidden;
+        border-radius: 6px;
+    
+        img {
+            width: 100%;
+            height: 300px;
+            transition: 0.3s ease-in-out;
+            border-radius: 6px;
+        }
+
+        &:hover img {
+            transform: scale(1.2);
+        }
+    }
+
+    h4 {
+        font-size: 1.3rem;
+        padding: 0.9rem 0.2rem 0;
+    }
+}
+
+@media screen and (max-width: 720px) {
+        .CardBox {
+            margin: 4rem 2rem;
+        
+        &__newsCard {
+            flex-direction: column;
+        }
+        }
+        
+        .card {
+            width: 100%;
+            margin-bottom:1.5rem;
+        }
+}
