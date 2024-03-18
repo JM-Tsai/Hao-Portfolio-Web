@@ -1,5 +1,6 @@
 import Hero from "../components/hero/Hero"
 import streetImage from '../images/street.png';
+import About from "../components/about/About";
 
 export default function AboutPage() {
     return (
@@ -10,8 +11,7 @@ export default function AboutPage() {
                 heroText= '關於我'
                 heroButtonText= 'Explore'
             />
-
-            建置中
+            <About />
         </>
     ) 
 }

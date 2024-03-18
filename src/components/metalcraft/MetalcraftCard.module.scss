@@ -11,36 +11,72 @@ body {
     min-height: 100vh;
 }
 
-.layoutTitle {
-    margin: 4rem 6rem;
-    height: 80vh;
+.galleryBody {
     width: 80%;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+}
+
+.layoutTitle {
+    margin: 4rem 6rem;
+    // margin-left: 5rem;
+    height: 10rem;
+    width: 80%;
+    // text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
     
     h1 {
         font-size: 3rem;
         z-index: 1;
+    }
+
+    @media screen and (max-width: 720px) {
+        margin-top: 1rem;
+    }
+}
+
+.gallery {
+    width: 80%;
+    height: 80%;
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 10rem;
+    transition: 0.5s linear;
+    // justify-content: space-between;
+
+    @media screen and (max-width: 720px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: space-between;
+
     }
 }
 
 .card {
     position: relative;
     z-index: 0;
-    width: 500px;
-    height: 190px;
+    width: 400px;
+    height: 200px;
     // height: 450px;
     background: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.20);
-    transition: 0.5s;
+    transition: 0.5s ease;
     display: flex;
 
     &:hover {
-        height: 450px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-150px);
+        box-shadow: 5px 15px 50px rgba(56, 55, 55, 0.5);
     }
 
     .cardImg {
@@ -48,13 +84,13 @@ body {
         left: 50%;
         top: -50%;
         transform: translateX(-50%);
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         background: #fff;
-        border-radius: 20px;
+        border-radius: 10px;
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.20);
         overflow: hidden;
-        transition: 0.5s;
+        transition: 0.5s ease;
 
         img {
             position: absolute;
@@ -72,6 +108,7 @@ body {
         left: 50%; // 將左邊界設定在父元素的中央
         top: 50%; // 將上邊界設定在父元素的中央
         transform: translate(-50%, -70%); // 使用translate來偏移自己的一半寬度和高度
+        box-shadow: 5px 10px 20px rgba(56, 55, 55, 0.5);
     }
 
     // context
@@ -96,11 +133,13 @@ body {
                 font-weight: 600;
                 color: #555;
                 line-height: 1.2rem;
+                margin-bottom: 1rem;
             
                 .data {
                     display: flex;
                     justify-content: space-between;
                     margin:  20px 0;
+                    
                 }
             }
         }
@@ -112,6 +151,12 @@ body {
             }
         }
     }
+
+    @media screen and (max-width: 720px) {
+
+        align-items: center;
+    }
+
 
 }
 

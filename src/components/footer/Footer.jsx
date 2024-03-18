@@ -13,12 +13,10 @@ function Footer() {
                 </div>
                 <div className={styles.footer__button}>
                     <div className={styles.button}>
-                        <a href='https://www.instagram.com/yk752332023/'>
                             <div className={styles.icon}>
                                 <i><BsInstagram /></i>
                             </div>
-                            <span>Instagram</span>
-                        </a>
+                            <span><a href='https://www.instagram.com/yk752332023/' target="_blank">Instagram</a></span>
                     </div>
 
                     <div className={styles.button}>

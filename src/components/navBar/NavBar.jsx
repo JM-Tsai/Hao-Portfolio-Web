@@ -14,7 +14,7 @@ const Navber = () => {
         { label: 'Home', path: '/' },
         { label: 'Metalcraft', path: '/MetalcraftPage' },
         { label: 'About', path: '/AboutPage' },
-        { label: 'Log in', path: '/LogInPage' }
+        // { label: 'Log in', path: '/LogInPage' }
     ];
     // map 映射
     const linksMap = links.map((link) => {
@@ -27,7 +27,7 @@ const Navber = () => {
 
     return (
         <header className={styles.navbar}>
-            TimeWhispers
+            Hao - Portfolio personal web
             <nav>
                 {/* nav ? [styles.navbar__menu, styles.active].join(' ') : [styles.meun] */}
                 <ul className={`${styles.navbar__menu} ${nav ? styles.navbar__active : ''}`}>

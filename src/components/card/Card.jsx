@@ -14,8 +14,11 @@ function Card(props) {
             <div className={styles.card__image}>
                 <img src={props.image} alt="image" />
             </div>
-            <h4>{props.heading}</h4>
-            <p>{props.text}</p>
+            <div className={styles.card__textBox}>
+                <h4>{props.heading}</h4>
+                <p>{props.text}</p>
+            </div>
+            
         </div>
     )
 }

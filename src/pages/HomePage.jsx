@@ -16,7 +16,6 @@ export default function HomePage() {
             />
             <ArticleParent />
             <NewsCard />
-            {/* <Footer /> */}
         </>
     ) 
 }

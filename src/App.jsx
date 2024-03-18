@@ -4,7 +4,7 @@ import Route from './routes/Route';
 import HomePage from './pages/HomePage';
 import MetalcraftPage from './pages/MetalcraftPage';
 import AboutPage from './pages/AboutPage';
-import LogInPage from './pages/LogInPage';
+// import LogInPage from './pages/LogInPage';
 import Footer from './components/footer/Footer';
 
 function App() {
@@ -21,11 +21,10 @@ function App() {
         <Route path='/AboutPage'>
           <AboutPage />
         </Route>
-        <Route path='/LogInPage'>
+        {/* <Route path='/LogInPage'>
           <LogInPage />
-        </Route>
+        </Route> */}
         <Footer />
-        
       </div>
   )
 }

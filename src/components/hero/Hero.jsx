@@ -29,25 +29,3 @@ function Hero({ heroImage, heroTitleText, heroText, heroButtonUrl, heroButtonTex
 }
 
 export default Hero;
-
-// 畫面字體滾輪視差
-// const [scrollY, setScrollY] = useState(0)
-
-//     useEffect(() => {
-//         const handleScroll = () => {
-//             const currentScrollY = window.scrollY
-//             setScrollY(currentScrollY)
-//         }
-//         window.addEventListener('scroll', handleScroll)
-
-//         return () => {
-//             window.removeEventListener('scroll', handleScroll)
-//         }
-//     }, [])
-
-//     return (
-//         <div className={styles.hero} style={{ backgroundPosition: `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)` }}>
-//             <div className={styles.hero__title}>Tuku</div>
-        
-//         </div>
-//     )

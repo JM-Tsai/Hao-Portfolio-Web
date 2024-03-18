@@ -70,8 +70,8 @@
     }
 
     @media screen and (max-width: 720px) {
-        .narrative{
-            margin: 4rem 2rem;
+        & {
+            margin: 1rem;
 
             &__box {
                 flex-direction: column-reverse;
@@ -87,6 +87,8 @@
             &__boxText {
                 width: 100%;
                 margin-top: 1rem;
+                margin-left: 0;
+                text-align: center;
                 h2 {
                     text-align: center;
                 }
